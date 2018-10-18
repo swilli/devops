@@ -25,6 +25,6 @@ public class TimetableRESTApi {
     @RequestMapping(value="/timetable/test", method=GET)
     public String test() {
         List<TimetableEntry> result = timetable.findByArrivalLessThan(new Date());
-        return String.valueOf(0);
+        return String.valueOf(result.size());
     }
 }
