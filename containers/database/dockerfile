@@ -1,3 +1,0 @@
-FROM mariadb:latest
-RUN mysql -u root -p T!m3tabl3 -e "CREATE database timetable;"
-
