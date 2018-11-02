@@ -5,23 +5,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import java.util.Date;
-
 @Entity
-public class TimetableEntry {
+public class Station {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long id;
+    protected long id;
+    protected String name;
 
-    private String name;
-    private Date arrival;
-
-    protected TimetableEntry() {}
-
-    public TimetableEntry(String name, Date arrival) {
+    public Station(String name) {
         this.name = name;
-        this.arrival = arrival;
     }
 
 }
